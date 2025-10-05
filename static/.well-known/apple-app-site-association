@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "4P5S67F56W.top.mediacare.hifier.ios",
+        "paths": ["/callback", "/auth/*"]
+      }
+    ]
+  }
+}
