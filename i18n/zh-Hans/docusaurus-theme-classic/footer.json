@@ -1,0 +1,14 @@
+{
+  "link.title. ": {
+    "message": " ",
+    "description": "The title of the footer links column with title=  in the footer"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Privacy Policy",
+    "description": "The label of footer link with label=Privacy Policy linking to /privacy_policy"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 MediaCare.top. All rights reserved.",
+    "description": "The footer copyright"
+  }
+}
