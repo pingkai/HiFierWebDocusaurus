@@ -1,0 +1,76 @@
+---
+
+sidebar_position: 6
+
+---
+
+import Ear from '@site/static/img/Ear.svg'
+import AirPlay from '@site/static/img/airplay-audio.svg'
+import Repeat from '@site/static/img/repeat-all.svg'
+import PlayList from '@site/static/img/playlist.svg'
+import Dots from '@site/static/img/dots-horizontal.svg'
+import Add2PlayList from '@site/static/img/add-to-playlist.svg'
+
+# 播放器
+
+## 封面图片
+
+左右滑动封面图片总是切换到上一首或者下一首歌曲，不管当前列表的循环模式或者播放的内容的长度。
+
+
+## 音频质量条
+播放器界面采用一个指示条来显示当前的音频质量
+
+<span style={{backgroundColor: '#FFB500', width: 20,height: 20,display: 'inline-block',}}></span> :
+文件格式是高解析度音频，或者DoP输出<br />
+
+<span style={{backgroundColor: '#56D256', width: 20,height: 20,display: 'inline-block',}}></span> :
+表示无损文件或者无损输出<br />
+
+<span style={{backgroundColor: '#30A9F3', width: 20,height: 20,display: 'inline-block',}}></span> :
+表示有损编码文件或者输出有损<br />
+
+### 高解析度音频
+<span style={{backgroundColor: '#FFB500'}}>DSD 2.8MHz</span> → <span style={{backgroundColor: '#FFB500'}}> DoP </span><br />
+表示音频源文件为DSD格式，采样率 2.8MHz，输出为DoP输出<br />
+
+
+
+### 无损音乐
+<span style={{backgroundColor: '#56D256'}}>FLAC 44.1KHz</span> → <span style={{backgroundColor: '#56D256'}}> 48KHz </span><br />
+表示文件的编码格式是FLAC，为无损压缩格式，采样率是44.1KHz，输出是48KHz，由于输出采样率大于等于文件格式，所以为无损输出<br />
+
+<span style={{backgroundColor: '#FFB500'}}>FLAC 48KHz</span> → <span style={{backgroundColor: '#30A9F3'}}> 44.1KHz </span><br />
+表示文件是 48KHz的高解析度音频，输出是44.1KHz，输出采样率低于文件采样率，是有损输出<br />
+
+
+### 有损音乐
+<span style={{backgroundColor: '#30A9F3'}}>MP3 320Kb/s</span> → <span style={{backgroundColor: '#56D256'}}> 48KHz </span><br />
+MP3编码格式为有损格式，一般有损格式的采样率为44.1KHz，并且此时采样率的高低已经没有意义了，音质和码率有关，所以在显示有损格式时，显示了码率，不显示采样率。
+
+## 功能按钮
+
+### <Ear width="24" height="24" /> 听歌识曲：
+点击按钮后播放器会尝试识别当前播放的内容，所以不要暂停播放，识别时间可能3-10s之间，和识别的内容有关系，识别可能会失败，也有可能识别成错误的歌曲，您可以换个歌曲的位置重试识别，个人经验：有人声的位置识别率更高。
+
+### <AirPlay width="24" height="24" /> AirPlay:
+在局域网内有可用的AirPlay设备时，此按钮会被显示出来，点击后可以投射到可用的设备上，此功能和系统的AirPlay按钮功能一致
+:::tip 提示
+AirPlay时，音频输出的采样率和接收设备有关，可能是48KHz或者44.1KHz，编码格式通常为ALAC格式
+:::
+
+### 倍速按钮
+
+在长内容播放格式下，倍速按钮将被显示，正常的音乐模式下，倍速按钮不会被显示。
+
+### 循环模式
+当您在文件浏览器中点击一个音频文件后，播放器会把当前文件夹下的所有文件（不包含文件夹）创建一个临时的播放列表，默认全部顺序循环播放<Repeat width="20" height="20" />您可以点击循环模式切换按钮进行切换。循环模式会被保存到播放列表中。
+
+### <PlayList width="24" height="24" />播放列表
+点击播放列表按钮后将弹出正在播放的播放列表，播放列表默认按照文件名升序排列，您可以通过**长按**操作来调整顺序，通过每个文件的快捷菜单<Dots width="20" height="20" />对每个文件进行相关的操作。
+调整好顺序后，使用<Add2PlayList width="20" height="20"/>按钮可以将当前播放列表保存。
+
+:::tip 提示
+循环模式和播放倍速信息将被一起保存的播放列表，下次播放时将使用这些信息；使用文件浏览器再次进入同一个文件夹进行播放将建立新的播放列表。
+:::
+
