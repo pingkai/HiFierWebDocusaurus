@@ -39,8 +39,6 @@ Currently, HiFier does not choose the solution of copying files. In subsequent v
 
 ## Imported Files
 
-此方式是通过电脑直接向程序中添加文件，如何添加，请参考：
-
 This method is to add files directly to the program through the computer. For how to add files, please refer to:
 
 **Windows**: https://support.apple.com/guide/itunes/itns32636/windows
