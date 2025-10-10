@@ -3,3 +3,72 @@
 sidebar_position: 6
 
 ---
+
+import Ear from '@site/static/img/Ear.svg'
+import AirPlay from '@site/static/img/airplay-audio.svg'
+import Repeat from '@site/static/img/repeat-all.svg'
+import PlayList from '@site/static/img/playlist.svg'
+import Dots from '@site/static/img/dots-horizontal.svg'
+import Add2PlayList from '@site/static/img/add-to-playlist.svg'
+
+# Player
+
+## Cover Image
+
+Swiping the cover image left or right always switches to the previous or next song, regardless of the current playlist loop mode or the length of the content being played.
+
+## Audio Quality Bar
+The player interface uses an indicator bar to display the current audio quality
+
+<span style={{backgroundColor: '#FFB500', width: 20,height: 20,display: 'inline-block',}}></span> :
+The file format is high-resolution audio, or DoP output<br />
+
+<span style={{backgroundColor: '#56D256', width: 20,height: 20,display: 'inline-block',}}></span> :
+Indicates lossless file or lossless output<br />
+
+<span style={{backgroundColor: '#30A9F3', width: 20,height: 20,display: 'inline-block',}}></span> :
+Indicates lossy encoding file or lossy output<br />
+
+### High-resolution audio
+<span style={{backgroundColor: '#FFB500'}}>DSD 2.8MHz</span> → <span style={{backgroundColor: '#FFB500'}}> DoP </span><br />
+means the audio source file is in DSD format, with a sampling rate of 2.8MHz, and the output is DoP output.<br />
+
+### Lossless Music
+<span style={{backgroundColor: '#56D256'}}>FLAC 44.1KHz</span> → <span style={{backgroundColor: '#56D256'}}> 48KHz </span><br />
+means the file is encoded in FLAC, a lossless compression format, with a sampling rate of 44.1KHz and an output of 48KHz. Since the output sampling rate is greater than or equal to the file format, it is lossless output.<br />
+
+<span style={{backgroundColor: '#FFB500'}}>FLAC 48KHz</span> → <span style={{backgroundColor: '#30A9F3'}}> 44.1KHz </span><br />
+means the file is 48KHz high-resolution audio, and the output is 44.1KHz. The output sampling rate is lower than the file sampling rate, which is lossy output.<br />
+
+### Lossy Music
+<span style={{backgroundColor: '#30A9F3'}}>MP3 320Kb/s</span> → <span style={{backgroundColor: '#56D256'}}> 48KHz </span><br />
+MP3 encoding format is a lossy format. Generally, the sampling rate of a lossy format is 44.1KHz. At this time, the sampling rate is meaningless. The sound quality is related to the bit rate, so when displaying the lossy format, the bit rate is displayed instead of the sampling rate.
+
+## Function Buttons
+
+### <Ear width="24" height="24" /> Identify songs by listening to them：
+After clicking the button, the player will try to identify the currently playing content, so do not pause the playback. The recognition time may be between 3-10 seconds, which is related to the content to be recognized. The recognition may fail or the wrong song may be recognized. You can try to change the position of the song and try again. Personal experience: the recognition rate is higher at the position with vocals.
+
+### <AirPlay width="24" height="24" /> AirPlay:
+When there is an available AirPlay device in the local area network, this button will be displayed. Click it to project to the available device. This function is the same as the system AirPlay button function.
+:::tip 提示
+hint
+When using AirPlay, the sampling rate of the audio output depends on the receiving device and may be 48KHz or 44.1KHz. The encoding format is usually ALAC.
+:::
+
+### Speed ​​​​button
+
+In the long content playback format, the speed button will be displayed. In the normal music mode, the speed button will not be displayed.
+
+### Loop Mode
+
+When you click an audio file in the file browser, the player creates a temporary playlist of all files in the current folder (excluding folders). By default, all files are played in a loop<Repeat width="20" height="20" />. You can click the loop mode toggle button to switch the loop mode. The loop mode is saved in the playlist.
+
+### <PlayList width="24" height="24" />Playlist
+
+Clicking the playlist button will bring up the currently playing playlist. The playlist is sorted in ascending order by file name by default. You can adjust the order by **long-pressing** the playlist and perform related operations on each file through the shortcut menu<Dots width="20" height="20" />. After adjusting the order, use the button <Add2PlayList width="20" height="20"/>to save the current playlist.
+
+:::tip hint
+The loop mode and playback speed information will be saved together with the playlist, which will be used the next time you play. Using the file browser to enter the same folder again to play will create a new playlist.
+:::
+

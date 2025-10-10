@@ -4,102 +4,85 @@ sidebar_position: 2
 
 ---
 
-# 未来整体升级计划
+# Future overall upgrade plan
 
-我们开发的每一个功能，都要尽量让他有意义，我认真开发，然后用户用着舒服；有些功能是绝对不会做的，这种需求本身没有任何意义，反而可能造成反作用，可能只是用来做广告的，比如：
+## Features not considered
 
-- 音频的升频功能： 没有任何意义，不会对音质有任何提升，相反还可能导致音质下降，消耗CPU算力。
-- PCM转DSD功能： 和升频功能差不多；我相信支持DSD的外设一定支持PCM。
+Every feature we develop should be as meaningful as possible. We develop it carefully so that users can use it comfortably. Some features will never be implemented. Such requirements themselves have no meaning and may even cause counterproductive effects. They may just be used for advertising, for example:
 
-还有一些功能，无特殊情况（比如我现在的认知有问题）也不考虑做的，要做也是优先级最低的：
+- **Audio upscaling function**: It is meaningless and will not improve the sound quality. On the contrary, it may cause the sound quality to deteriorate and consume CPU computing power.
+- **PCM to DSD function**: Similar to the upsampling function; I believe that peripherals that support DSD must also support PCM.
 
-- 音频的可视化： 大部分音频可视化的效果并不好，没有一点带入感，反而只用音量那个效果更好，此功能需要大量的算力，但效果可有可无，拿着手机听歌看这个的场景我感觉太少了，可能在TV端上开party的时候有用。
+There are also some features that, unless there are special circumstances (such as my current cognitive problems), are not considered for implementation, and if they are to be implemented, they are the lowest priority:
 
-对于云盘的支持，有合适的云盘可以随时接入；
+- **Audio visualization**: The effects of most audio visualizations are not very good, and there is no sense of immersion. On the contrary, the effect is better when using only the volume. This function requires a lot of computing power, but the effect is dispensable. I feel that there are too few scenes of listening to music and watching this on a mobile phone. It may be useful when having a party on the TV。
 
-对于媒体服务器，目前的计划是不再增加新的媒体服务器了
+For media servers, the current plan is to no longer add new media servers.
 
-plex用户我觉得可以直接用他的官方app PlexAMP就可以了，它已经做的很好了，还支持会员能力，况且plex本身也没有正式的 open API。
+- **Plex** users can use the official app PlexAMP, which is already very good and also supports membership capabilities.
 
-其他NAS的音乐服务，目前我没有兴趣支持新的了，我在支持群晖的audio station过程中发现他们其实并没有把精力放到这个上，只是为了有才做的，其他nas厂商可能做得更差，玩nas的小伙伴肯定知道如何按照个Jellyfin啥的。
+- **Music services of other NAS**: I am not interested in supporting new ones at the moment. When I was supporting Synology's audio station, I found that they did not actually put their energy into this. Other NAS manufacturers may do even worse. Friends who play with NAS must know how to follow Jellyfin or something like that.
 
+We prioritize features that may be upgraded in the future based on factors such as development difficulty, popularity, and user experience improvement:
 
+## P1
+### Openlist support
 
-我们按照功能的开发难度，流行度，用户体验提升的多少等因素，把未来可能要升级的功能按照优先级排列：
+Openlist can mount many network disks through unofficial APIs, which can solve the problem of mounting network disks without open APIs.
 
-### P1
+I have tried to compile Alist before, but something went wrong. I don’t know whether the current Openlist can be compiled successfully or whether it is convenient to use. But in the worst case, we can just use Alist and it won’t be a big problem. For users like us, the network disk is full of songs, videos, etc., so it doesn’t matter if we don’t put important information in it.
 
-#### 长音频支持
+Alist itself is difficult to use and may have various problems. My plan is to support alist without any support for its use, and in most cases will not fix the problems of alist itself.
 
-有很多用户用我们的程序并不会用来听歌的，而是用来听一些小说之类的内容的，这种场景其实很常见；这类内容和音乐的区别是：
+### display the Favorites of media server
 
-- 对音质几乎没有要求，可能绝大部分情况下是mp3，码率低
-- 大部分情况下只听一遍，不会反复听，所以缓存功能并不重要。（加个开关？）
-- 无封面和歌词需求（封面可能有）。
-- 需要倍速播放能力。（快速播放，无慢速播放需求）
-- 无频繁切换曲目的需求；切换上下首的按钮改成快进和快退一定的时长。
-- 需要记录每个曲目的播放历史
+In fact, this function is very common and many people need it. The problem that needs to be solved is
 
-开发此功能需要做的事
+- Not every media server supports collection
+- How to display collections needs to be studied. In many cases, users do not have any collections. If it is displayed under a tab, it is often empty at the beginning. Moreover, the collection capability of this software will not be synchronized to the server. Users need to collect it in other clients.
 
-- 大部分其实都是ui工作，目前播放器内核本身支持倍速播放；
-- 记录每个曲目的播放历史，这个需求可能需要我来优化一下目前的本地存储策略，计划引入数据库，保证再多的历史记录也保证速度，并且可以更细致的管理，然后可以用数据库把之前的历史记录，元数据信息等也迁移到数据库中。这个应该是花费最多时间的。
+### Global Search
 
+You can search the contents of files in all mounted cloud drives and media servers. The reason I haven't done this before is that WebDAV and Samba don't support searching, unless the client traverses all the directory structures and saves them. I don't think this solution is good.
 
+WebDAV and Samba may not be supported after implementation.
 
-#### Openlist的支持
+### Equalizer Support
 
-Openlist可以通过非官方api挂载很多网盘，可以解决没有open api的网盘的挂载问题。
+Equalizer support will take some time. I hope to make an equalizer that is not just an interface for you to pull up and down, which is actually meaningless and in most cases the results will probably not be good. I want to automatically set the equalizer for the output device. And then how to make the equalizer well and ensure that the sound is not broken as much as possible.
 
-之前有尝试过编译Alist，谁知道它出事了，现在的Openlist不知道是否可以编译成功，使用起来是否方便，但最差的情况我们就用Alist问题也不大，对于我们这种用户，网盘里面存的都是歌曲，视频啥的，重要的资料别放里面问题也不大。
+In addition, the equalizer may only be one part of the post-processing process, and other audio post-processing should be considered, such as volume balancing, channel delay adjustment, left and right channel switching, etc.
 
-Alist本身使用难度大，其中也可能有这样那样的问题，我的计划是，支持alist后不对使用进行任何支持，并且大部分情况下不会对alist本身的问题进行修复。
+## P2
 
-#### 媒体服务器的收藏显示
+### On the media server, the player interface displays content related to the current artist
 
-其实这个功能很普通，也有很多人需要，需要解决的问题是
+The reason for placing it in p2 is mainly due to code implementation and interaction issues. Currently, the player page is global, and the app itself supports multiple account logins. The logical connection here may require a better mechanism to do it.
 
-- 并不是每个媒体服务器都支持收藏
-- 如何展示收藏，这个需要研究下，很多情况下用户并没有收藏，如果显示在一个tab下，一开始经常是空的，而且本软件的收藏能力也不会同步到服务器上，用户需要在其他客户端收藏才行。
+Another issue is UI interaction. What should I do after clicking on the singer's details? If it is displayed in the player interface and can be returned, then the navigation logic of the current code needs to be significantly modified.
 
-#### 全局搜索能力
+### Android Platform Support
 
-可以搜索全部挂载的云盘和媒体服务器里面文件的内容，一直没有做的原因是，webdav和samba并不支持搜索，除非客户端把所有的目录结构遍历下来并保存，我并不觉得这个方案好。
+Reasons for placing it on p2:
 
-可能实现后不支持webdav和samba。
+1. The player kernel is related to device compatibility. Android has a large number of mobile phone models, which will lead to high adaptation costs and require purchasing many mobile phones for testing.
+2. Currently, many components of react-native have issues related to the Android platform, so it may take a lot of time to fix bugs.
+3. The Play Store is not available in mainland China, so how to distribute apps is a problem.
 
-#### 均衡器支持
-
-均衡器的支持需要一些时间，我希望做出来的均衡器，不只是一个界面让你去上下拉，这样其实没啥意义，大部分情况下可能拉出来的结果都不好，我想的是针对输出设备进行自动的均衡器设置。然后如何做好均衡器，保证尽量不破音等。
-
-另外均衡器可能只是后处理的一个环节，要考虑后续加其他音频后处理，比如音量均衡，声道延迟调整，左右声道切换等等。
-
-### P2
-
-#### 媒体服务器下，播放器界面显示当前歌手相关的内容
-
-放在p2的原因是：主要是代码实现和交互问题，目前播放器页是全局的，而app本身是支持多账户登录的，这里面的逻辑衔接可能需要一个比较好的机制去做。
-
-另外就是UI交互问题，点击歌手详情后怎么做？如果在播放器的界面里面显示，然后还能返回，那么需要比较大的修改当前代码的导航逻辑。
+### LastFM Support 
 
 
+## P3
 
-#### Android平台支持
+### Radio stations supported by audio station
 
-放在p2的原因： 
+The default radio station has a small audience, and it is difficult to search for radio stations yourself. Iphones can also listen to radio stations, but a recording function can be added.
 
-1. 播放器内核和设备兼容性有关，Android有大量的手机型号，会导致适配成本高，需要买很多手机进行测试。
-2. 目前 react-native的很多组件，看他们的issues，绝大部分都是Android平台的问题，所以可能需要花大量的时间进行bug修复。
-3. 中国大陆地区无法使用Play Store，如何分发App是个问题。
-4. 还有个小问题，Android的开发环境太耗资源，目前我的mac电脑跑起来太卡，需要购买比较强悍的设备。
+### Built-in scraper
 
-### P3
+The mobile phone is not suitable for scraping
 
-#### 支持audio station的电台
-
-默认电台受众群体少，自己搜索电台难度大，苹果手机本身也能听电台，不过可以加个录制功能
-
-
-
-
-
+- Energy and time consumption
+- Some network storage services limit the number of files that can be requested.
+- Unable to update in time
+- Consumes storage space.

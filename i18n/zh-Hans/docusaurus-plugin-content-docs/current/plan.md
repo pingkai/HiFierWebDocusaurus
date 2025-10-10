@@ -88,7 +88,7 @@ Alist本身使用难度大，其中也可能有这样那样的问题，我的计
 2. 目前 react-native的很多组件，看他们的issues，绝大部分都是Android平台的问题，所以可能需要花大量的时间进行bug修复。
 3. 中国大陆地区无法使用Play Store，如何分发App是个问题。
 
-### LatFM支持
+### LastFM支持
 
 
 
