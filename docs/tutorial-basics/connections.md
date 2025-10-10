@@ -10,17 +10,17 @@ The main connect page is used for all operations related to files or media serve
 
 :::tip hint
 
-The first time you open this page, it will automatically refresh the available servers on the LAN. You can also refresh the discovery service by scrolling down. Samba's discovery service currently supports mDns (Bonjour) and NetBios protocols, covering both Apple and Windows devices. NAS devices generally have both services enabled by default. If your NAS is not discovered, or is discovered incorrectly, please check the relevant discovery service configuration. Audio Station does not have its own dedicated discovery service and currently relies on Synology's Samba discovery service. If you do not enable the NAS's Samba service, Audio Station will not be discovered.
+The first time you open this page, it will automatically refresh the available servers on the LAN. You can also refresh the discovery service by scrolling down. Samba's discovery service currently supports mDNS (Bonjour) and NetBios protocols, covering both Apple and Windows devices. NAS devices generally have both services enabled by default. If your NAS is not discovered, or is discovered incorrectly, please check the relevant discovery service configuration. Audio Station does not have its own dedicated discovery service and currently relies on Synology's Samba discovery service. If you do not enable the NAS's Samba service, Audio Station will not be discovered.
 
 :::
 
 ## File Picker
 
-The FIle Picker allows you to select files outside the application and play them in the device through the system **File** app.
+The File Picker allows you to select files outside the application and play them on the device through the system **File** app.
 
 :::tip hint
 
-The system's File App can not only access files on your device; you can manually add a Samba server; when some Cloud Drive clients are installed on your phone, most of them will mount their content to the file program by default, so through the file program, you can choose many types of files to play. It works on MacOS.
+The system's File App can not only access files on your device; you can also manually add a Samba server. When some Cloud Drive clients are installed on your phone, most of them will mount their content to the file program by default, so through the file program, you can choose many types of files to play. It works on macOS.
 :::
 
 :::warning Notice
@@ -32,13 +32,13 @@ Some App will copy external files to their own program space after selecting the
 1. Copying may require downloading data from the network, so copying is asynchronous and synchronous playback is not possible.
 2. Takes up double the storage space
 
-Currently, HiFier does not choose the solution of copying files. In subsequent versions, if there is a good solution, it may be optimized.
+Currently, HiFier does not offer the option to copy files. In subsequent versions, if there is a good solution, it may be optimized.
 
 :::
 
 ## Imported Files
 
-This method is to add files directly to the program through the computer. For how to add files, please refer to:
+This method involves adding files directly to the program through the computer. For how to add files, please refer to:
 
 **Windows**: https://support.apple.com/guide/itunes/itns32636/windows
 
@@ -63,7 +63,7 @@ Displays the files or media servers available in the local area network. When yo
 :::tip hint
 The server names displayed are derived from LAN-related protocols and do not support renaming; login information will be bound to the server name or server ID, which means you do not need to set static IP addresses for these servers. After the server IP address changes, HiFier can still find the corresponding host and connect. (Only for LAN)
 
-The LAN discovery service is a LAN broadcast protocol, so it only supports the discovery of servers under the same gateway. If your LAN has multiple gateways, it cannot support cross-gateway discovery. You can connect through a static IP address by **Add connection** .
+The LAN discovery service is a LAN broadcast protocol, so it only supports the discovery of servers under the same gateway. If your LAN has multiple gateways, it cannot support cross-gateway discovery. You can connect through a static IP address by **Add connection**.
 
 :::
 
@@ -84,7 +84,7 @@ Used to add any form of connection to the App, currently supporting cloud drives
 
 ### Cloud Drives
 
-Adding a cloud drive uses the standard Oauth2 protocol. After obtaining authorization, the App can obtain a token to access your files, so the program does not know your authentication information. After you delete the connection, the corresponding token will be deleted (some cloud disks support active revocation). You can also manually revoke any authorized program in the dash board of your corresponding cloud drive. After revocation, the authorized App will no longer be able to access your cloud drive.
+Adding a cloud drive uses the standard OAuth2 protocol. After obtaining authorization, the App can obtain a token to access your files, so the program does not know your authentication information. After you delete the connection, the corresponding token will be deleted (some cloud disks support active revocation). You can also manually revoke any authorized program in the dashboard of your corresponding cloud drive. After revocation, the authorized App will no longer be able to access your cloud drive.
 
 ### Media Server and File Server
 
@@ -92,7 +92,7 @@ These two servers use a direct login method using your username and password, an
 
 :::tip hint
 
-When you add a server, App will query the local storage for relevant login information first. If you have entered login information in an available server, that login information will be used directly here. If you do not want to use the saved login information, you can turn on the login interface to log in **Login new user** , so that you can login to the same server as a different user.
+When you add a server, App will query the local storage for relevant login information first. If you have entered login information in an available server, that login information will be used directly here. If you do not want to use the saved login information, you can turn on the login interface to log in **Login new user**, so that you can log in to the same server as a different user.
 
 Leaving both the Samba server username and password blank means logging in as the Guest user. Currently, some NAS may not implement anonymous login in this way, so it may not support anonymous login for those devices for now (such as Huawei's NAS).
 
