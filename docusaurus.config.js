@@ -5,7 +5,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (
   module.exports = {
-    title: "Feel the Beat, Live the Moment",
+    title: "HiFier, HiFi Music Player",
     tagline:
       "Experience the ultimate music player with high-quality audio and seamless playback.",
     url: "https://hifier.mediacare.top",
@@ -13,8 +13,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "https://s2.loli.net/2025/01/17/LISQt2T7lwN9ZRb.png",
-    organizationName: "facebook", // Usually your GitHub org/user name.
-    projectName: "docusaurus", // Usually your repo name.
+    organizationName: "pingkai", // Usually your GitHub org/user name.
+    projectName: "HiFierWebDocusaurus", // Usually your repo name.
 
     i18n: {
       defaultLocale: "en",
@@ -35,13 +35,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             sidebarPath: require.resolve("./sidebars.js"),
             // Please change this to your repo.
             editUrl:
-              "https://github.com/facebook/docusaurus/edit/main/website/",
+              "https://github.com/pingkai/HiFierWebDocusaurus/edit/main/",
           },
           blog: {
             showReadingTime: true,
             // Please change this to your repo.
             editUrl:
-              "https://github.com/facebook/docusaurus/edit/main/website/blog/",
+              "https://github.com/pingkai/HiFierWebDocusaurus/blob/main/blog/",
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
@@ -66,9 +66,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               position: "left",
               label: "Tutorial",
             },
-            { to: "/blog", label: "Blog", position: "left" },
+            // { to: "/blog", label: "Blog", position: "left" },
             {
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/pingkai/HiFierWebDocusaurus",
               label: "GitHub",
               position: "right",
             },

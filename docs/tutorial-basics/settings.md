@@ -17,7 +17,7 @@ Currently, you can choose between **Dark**, **Light**, and **system**. The defau
 
 In non-mixed output mode, the music information played by the App will be updated to the system's Now Playing Info Center. This module can be displayed on the lock screen, AirPlay screen, Bluetooth receiver, CarPlay screen, and iPod dock. These screens are collectively called remote screens.
 
-After turning on this option, the lyrics information will be disguised as album information (the Now Playing module does not support lyrics) and updated in real time to these remote screens. The most common thing is that you can see the lyrics on CarPlay and when the screen is locked.
+After turning on this option, the lyrics information will be disguised as album information (the Now Playing module does not support lyrics) and updated in real time to these remote screens. The most common case is that you can see the lyrics on CarPlay and the lock screen of your phone.
 
 Some devices are incompatible with this camouflage behavior and may experience strange phenomena such as screen flickering or counting. In this case, you can turn off this feature.
 
@@ -48,40 +48,40 @@ Currently, iOS only supports DoP output of DSD64 and DSD128 (bandwidth limitatio
 
 ### Mix audio with other app 
 
-In sampled mixed mode, the audio output of your app is mixed with the audio of other apps, preventing interruption from other apps. For example, you can use the music playing in your app as background music while watching other videos. In this scenario, you may encounter the problem of the background music being too loud. This is because the volume of music files is generally adjusted to a high level for better sound quality. You can adjust the volume of the entire app to resolve this issue.
+In the mixed mode, the audio output of your app is mixed with the audio of other apps, preventing interruption from other apps. For example, you can use the music playing in your app as background music while watching other videos. In this scenario, you may encounter the problem of the background music being too loud. This is because the volume of music files is generally adjusted to a high level for better sound quality. You can adjust the volume of the entire app to resolve this issue.
 
-In mixed mode, DoP, the system's **Now Playing** function will be disabled.
+In mixed mode, DoP adn the system's **Now Playing** function will be disabled.
 
 
 
 ## Long content
 
-This feature is designed for listening to audio content, such as audio books and novels. It is automatically enabled by default. You can set the minimum length of long-form audio to suit your needs (the default is 10 minutes). The program uses this value to distinguish whether it is a long-form audio.
+This feature is designed for listening to audio content, such as audio books and podcasts. It is enabled by default. You can set the minimum length of long-form audio to suit your needs (the default is 10 minutes). The program uses this value to distinguish whether it is a long-form audio.
 
 In long-form audio:
 
-- The up and down buttons on the player interface and remote screen will become forward and reverse progress functions. (More detailed and simple jump)
-- The "music recognization" button will be replaced by the "Speed" button. (It's basically impossible to identify a song by listening to it, so playing at speed becomes a necessity in this case.)
+- The **previous** and **next** buttons on the player interface and remote screen will become forward and rewind progress functions. (More detailed and simple jump)
+- The "music recognization" button will be replaced by the "Speed" button. (It's basically impossible to identify it, so playing at speed becomes a necessity in this case.)
 - Lyrics will no longer be displayed. (It is impossible to get the correct lyrics)
 - Long-form audio will automatically resume from the last playback point the next time it is played.
 - The playback speed will be recorded in the playlist information.
-- The sliding cover image still retains the previous and next song function.
+- The sliding cover image still retains the previous and next song functions.
 
 ## Caching
 
-The player core supports caching data to local storage when playing online audio. This feature can significantly increase playback speed when you play music repeatedly, save data bandwidth, and optimize the performance of online playback of certain formats.
+The player core supports caching data to local storage when playing online audio. This feature can significantly reduce the start time when you play music repeatedly, save data bandwidth, and optimize the performance of online playback of certain formats.
 
 This feature is enabled by default, with a maximum cache size of 1GB. Video caching is disabled by default to prevent large video files from overwriting audio files in the cache. If you frequently play videos, consider increasing the maximum cache size and enabling video caching.
 
 :::tip hint
 The caching function supports the standard HTTP cache protocol, extends the Samba protocol, and is customized and optimized for streaming media scenarios; the cache function does not consume your excess traffic.
 
-Currently, the judgment of whether it is a video file is achieved through the extension name. That is, when you play an mp4 file, the cache module will treat this file as a video, although this file may only contain audio.
+Currently, the judgment of whether it is a video file is achieved through the extension name of the files. That is, when you play an mp4 file, the cache module will treat this file as a video, although this file may only contain audio.
 :::
 
 ## History​
 
-All your playback history will be stored in the history playlist in order. By default, only the latest 20 are recorded. You can increase this value as needed. To prevent unexpected data usage when playing the history playlist, video files are not stored in the history by default. You can modify this value.
+All your playback history will be stored in the playlist named history in order. By default, only the latest 20 are recorded. You can increase this value as needed. To prevent unexpected data usage when playing the history playlist, video files are not stored in the history by default. You can modify this value.
 
 :::tip Best Practices
 When you modify the maximum number of history records, please consider also modifying the maximum cache value. This ensures that almost no data is used when listening to history records, which is very useful when data needs to be paid.

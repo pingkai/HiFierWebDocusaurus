@@ -178,5 +178,44 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "homepage.button.download": {
+    "message": "下载"
+  },
+  "homepage.features.hi-res.title": {
+    "message": "高解析度音频"
+  },
+  "homepage.features.hi-res.description": {
+    "message": "享受无损和高解析度音乐，透传DSD数据到您的DAC，享受原汁原味的高解析度音频。"
+  },
+  "homepage.features.playback.title": {
+    "message": "离线 & 在线播放"
+  },
+  "homepage.features.playback.description": {
+    "message": "下载您喜欢的歌曲，随时随地畅听。随时在线畅听文件服务器，媒体服务器和云盘，无需等待，解放手机空间。"
+  },
+  "homepage.features.artwork.title": {
+    "message": "在线封面 & 歌词"
+  },
+  "homepage.features.artwork.description": {
+    "message": "自动在线匹配歌词和封面"
+  },
+  "homepage.features.formats.title": {
+    "message": "全格式支持"
+  },
+  "homepage.features.formats.description": {
+    "message": "支持几乎所有的音频格式和常见的视频格式"
+  },
+  "homepage.features.caching.title": {
+    "message": "缓存播放"
+  },
+  "homepage.features.caching.description": {
+    "message": "播放过程中缓存数据到本地，下次播放时节省流量"
+  },
+  "homepage.features.playlist.title": {
+    "message": "自定义播放列表"
+  },
+  "homepage.features.playlist.description": {
+    "message": "用完全可定制的播放列表来整理您的音乐"
   }
 }

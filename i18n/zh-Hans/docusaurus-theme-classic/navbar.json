@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "Hifier Music Player",
+    "message": "Hifier 音乐播放器",
     "description": "The title in the navbar"
   },
   "item.label.Tutorial": {
-    "message": "Tutorial",
+    "message": "帮助",
     "description": "Navbar item with label Tutorial"
   },
   "item.label.Blog": {
-    "message": "Blog",
+    "message": "博客",
     "description": "Navbar item with label Blog"
   },
   "item.label.GitHub": {
