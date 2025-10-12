@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 # About HiFier
-The name of HiFier is HiFi + er, which means people who like to play high-fidelity music.
 
 ## HiFier's design goals
 - **Cross-platform**: HiFier is currently developed using the [react-native](https://reactnative.dev/) framework, which provides basic support for cross-platform development. Currently, it supports iPhone, iPad, and Mac (based on iOS interface, non-native) platforms, and will support Android platforms in the near future.
@@ -47,7 +46,7 @@ FTP, NFS and other protocols are not popular at present and are not supported fo
 ### 4. Media Server Support
 HiFier was initially designed as a file server client, with media server support planned for the future. However, due to conflicts between the playlist and favorites features of the media server and those provided by HiFier itself, historical records, playlists, and favorites are not synced to the server and are only saved within the program. Currently, support for media servers is limited to reading content from the media server for playback and searching.
 
-Therefore, the current media server is actually confined to HiFier, and it is not so intuitive to use; but it is not easy to solve this problem; I have also been planning whether to make a separate App to specifically support the media server, which should provide a better experience.
+Regarding the current issue of the media server being confined within HiFier, in the future, considering developing a standalone app specifically to support the media server should provide a better experience.
 
 :::tip hint
 It is recommended that all media servers use the https protocol if conditions permit to prevent server password leakage.
@@ -64,7 +63,7 @@ Subsonic has stopped updating. **Navidrome** is currently the most widely used. 
 
 The Subsonic API is an outdated design. The most obvious problem is that the client doesn't know whether the server has cover information for a particular song, and returns a default image when there are no image resources. This causes the client to download a large number of duplicate images and cannot use other images instead. The URL address of the image is related to the song ID, so even if it is the same album cover, it will be downloaded multiple times when displayed. The client has no way to reuse or cache images.
 
-Navidrome has its own set of web APIs, and its own web client uses this set of APIs, but this set of APIs does not currently seem to have a significant improvement over the original APIs; and the author declares that this set of APIs is unstable and will change with the server version upgrade, and it is not public; in other words, this API is used to implement the web client that comes with its server and may be changed at any time. As a client independent of the server, HiFier is not suitable for using these APIs (although the APIs are not public, they are easy to know).
+Navidrome has its own set of web APIs, and its own web client uses this set of APIs, but this set of APIs does not currently seem to have a significant improvement over the original APIs; and the author declares that this set of APIs is unstable and will change with the server version upgrade, and it is not public; in other words, this API is used to implement the web client that comes with its server and may be changed at any time. As a client independent of the server, HiFier is not suitable for using these APIs.
 
 #### Synology AudioStation
 Supports connection via quickConnect ID and address; AudioStation itself does not have a discovery protocol. The current implementation logic is: first discover Synology's samba, then determine whether it is Synology and whether AudioStation is installed. Therefore, if your Synology does not have samba enabled, the automatic discovery function of AudioStation cannot be used.
@@ -79,4 +78,4 @@ Because driving isn't ideal for complex operations, CarPlay currently supports a
 
 Due to iOS system limitations, the current maximum output is DSD128. DSD samples above this sampling rate will be converted to PCM for output. Currently, the highest DSD decoded is DSD1024, but this may vary depending on the performance of the phone. Since the current Mac version uses the underlying iOS library, it does not support DSD output. If it need to output DSD on a Mac in the future, it will need to support the Mac system separately.
 
-Android's DSD output capability should be higher than that of iOS. I will update it after I have a version that supports Android.
+Theoretically, Android’s DSD output capability can surpass that of iOS. Updates will be provided once the Android version is supported.
