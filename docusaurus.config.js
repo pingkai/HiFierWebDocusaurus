@@ -34,8 +34,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
           docs: {
             sidebarPath: require.resolve("./sidebars.js"),
             // Please change this to your repo.
-            editUrl:
-              "https://github.com/pingkai/HiFierWebDocusaurus/edit/main/",
+            editUrl: ({ locale, docPath }) => {
+              if (locale === "zh-Hans") {
+                // Link to a Crowdin project for French translations, for example
+                return `https://github.com/pingkai/HiFierWebDocusaurus/edit/main/i18n/zh-Hans/docusaurus-plugin-content-docs/current/${docPath}`;
+              }
+              // Default to GitHub for other locales
+              return `https://github.com/pingkai/HiFierWebDocusaurus/edit/main/docs/${docPath}`;
+            },
           },
           blog: {
             showReadingTime: true,
