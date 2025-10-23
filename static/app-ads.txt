@@ -17,13 +17,13 @@ media.net, 8CUD06Z68, RESELLER
 openx.com, 540785403, RESELLER, 6a698e2ec38604c6
 openx.com, 559798512, RESELLER, 6a698e2ec38604c6
 opera.com, pub6538436382208, RESELLER, 55a0c5fd61378de3
+outbrain.com, 0073fa86cff719c752763d2c3ee52c8f00, RESELLER
 pubmatic.com, 158154, RESELLER, 5d62403b186f2ace
 pubmatic.com, 158862, RESELLER, 5d62403b186f2ace
 pubmatic.com, 159509, RESELLER, 5d62403b186f2ace
 pubmatic.com, 160974, RESELLER, 5d62403b186f2ace
 pubmatic.com, 164532, RESELLER, 5d62403b186f2ace
 pubnative.net, 1007501, RESELLER, d641df8625486a7b
-rhebus.works, 9019999555, RESELLER
 risecodes.com, 64e346c45ab8e700016b45cd, RESELLER
 rubiconproject.com, 16356, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 20050, RESELLER, 0bfd66d529a55807
@@ -33,7 +33,7 @@ sharethrough.com, bXzzb1bR, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, NNB0Zl76, RESELLER, d53b998a7bd4ecd2
 sharethrough.com, UbYLkrys, RESELLER, d53b998a7bd4ecd2
 smartadserver.com, 3817, RESELLER
-sonobi.com, d2b13d1c36, RESELLER, d1a215d9eb5aee9e
+thunder-monetize.com, 6343837988, RESELLER
 video.unrulymedia.com, 169764768, RESELLER
 video.unrulymedia.com, 322585001, RESELLER
 xandr.com, 13799, RESELLER
