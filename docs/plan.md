@@ -26,13 +26,13 @@ For media servers, the current plan is to no longer add new media servers.
 We prioritize features that may be upgraded in the future based on factors such as development difficulty, popularity, and user experience improvement:
 
 ## P1
-### Openlist support
+~~### Openlist support~~ (AGPL license)
 
 Openlist can mount many network disks through unofficial APIs, which can solve the problem of mounting network disks without open APIs.
 
 I have tried to compile Alist before, but something went wrong. I don’t know whether the current Openlist can be compiled successfully or whether it is convenient to use. But in the worst case, we can just use Alist and it won’t be a big problem. For users like us, the network disk is full of songs, videos, etc., so it doesn’t matter if we don’t put important information in it.
 
-Alist itself is difficult to use and may have various problems. My plan is to support alist without any support for its use, and in most cases will not fix the problems of alist itself.
+Alist itself is difficult to use and may have various problems. I plan to support Alist without any support for its use, and in most cases, will not fix the problems of alist itself.
 
 ### display the Favorites of media server
 
