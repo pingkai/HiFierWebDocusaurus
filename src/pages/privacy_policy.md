@@ -1,7 +1,7 @@
 - # **Privacy Policy**
-  **Last Updated:** September 2025
+  **Last Updated:** Nov. 2025
   
-  **Effective Date:** September 2025
+  **Effective Date:** Nov. 2025
 
   Thank you for using the HiFier app! We highly value your privacy and the protection of your personal information. This Privacy Policy is intended to clearly and transparently explain how we collect, use, store, share, and protect your data.
 
@@ -49,9 +49,7 @@
 2. Advertising Platforms
   - Non-subscribed users will see ads. Once you subscribe, no advertising platforms will be initialized at the next app startup.
   - Mainland China users: Ads are provided by Pangle (穿山甲). Privacy Policy: https://www.csjplatform.com/privacy/partner
-  - Non-Mainland China users: Ads are provided by AppLovin and Google.
-    - [AppLovin Privacy Policy](https://www.applovin.com/privacy/)
-    - [Google Privacy Policy](https://policies.google.com/privacy)
+  - Non-Mainland China users: Ads are provided by Google: [Google Privacy Policy](https://policies.google.com/privacy)
 ## 4. Purposes of Data Usage
   We collect or process data solely for the following purposes:
 1. To provide core app features (file playback, caching, etc.).
