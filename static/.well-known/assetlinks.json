@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "top.mediacare.hifier",
+    "sha256_cert_fingerprints": [
+      "5E:DB:21:AC:C1:30:19:8A:38:64:39:8F:C8:C4:93:7F:60:9A:9B:55:5D:B0:73:1C:EE:91:EB:67:3A:29:C8:3E"
+    ]
+  }
+}]
