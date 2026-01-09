@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 跳转兼容性测试</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background-color: #f0f2f5; }
+        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 350px; text-align: center; }
+        h2 { color: #1c1e21; font-size: 18px; margin-bottom: 25px; }
+        .btn { display: block; width: 100%; padding: 16px 0; margin-bottom: 15px; border-radius: 12px; font-size: 16px; font-weight: 600; text-decoration: none; transition: transform 0.1s; }
+        .btn:active { transform: scale(0.98); }
+        .btn-blue { background-color: #007AFF; color: white; }
+        .btn-orange { background-color: #FF9500; color: white; }
+        .info { font-size: 13px; color: #65676b; line-height: 1.5; margin-top: 20px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>App 唤起兼容性测试</h2>
+
+        <a id="linkA" href="#" class="btn btn-blue">方案 A：标准跳转</a>
+
+        <a id="linkB" href="#" class="btn btn-orange">方案 B：强力跳转</a>
+
+        <div class="info">
+            <b>测试说明：</b><br>
+            1. 先点蓝色，如果不跳，说明该浏览器拦截了标准 App Links。<br>
+            2. 再点橙色，如果弹出“是否打开应用”，说明强力方案生效。
+        </div>
+    </div>
+
+    <script>
+        // ======= 【只需修改这里】 =======
+        const myDomain = "hifier.mediacare.top";     // 你的域名，不带 https://
+        const myPackage = "top.mediacare.hifier";    // 你的包名
+        const myPath = "/auth";                 // 路径，默认用 / 即可
+        // ==============================
+
+        // 自动生成链接
+        document.getElementById('linkA').href = "https://" + myDomain + myPath;
+        
+        // 构造 Intent 字符串
+        const intentUri = "intent://" + myDomain + myPath + "#Intent;scheme=https;package=" + myPackage + ";end";
+        document.getElementById('linkB').href = intentUri;
+    </script>
+</body>
+</html>
