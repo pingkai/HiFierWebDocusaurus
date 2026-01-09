@@ -3,47 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App 跳转兼容性测试</title>
+    <title>正在返回应用...</title>
     <style>
-        body { font-family: -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background-color: #f0f2f5; }
-        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 350px; text-align: center; }
-        h2 { color: #1c1e21; font-size: 18px; margin-bottom: 25px; }
-        .btn { display: block; width: 100%; padding: 16px 0; margin-bottom: 15px; border-radius: 12px; font-size: 16px; font-weight: 600; text-decoration: none; transition: transform 0.1s; }
-        .btn:active { transform: scale(0.98); }
-        .btn-blue { background-color: #007AFF; color: white; }
-        .btn-orange { background-color: #FF9500; color: white; }
-        .info { font-size: 13px; color: #65676b; line-height: 1.5; margin-top: 20px; text-align: left; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9fb;
+            color: #333;
+        }
+        /* 加载动画 */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007AFF;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .content { text-align: center; padding: 0 20px; }
+        h2 { font-size: 1.2rem; margin-bottom: 10px; }
+        p { color: #666; font-size: 0.9rem; }
+
+        /* 初始隐藏按钮，跳转失败再显示 */
+        #manual-btn {
+            display: none; 
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+            animation: fadeIn 0.5s ease forwards;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>App 唤起兼容性测试</h2>
-
-        <a id="linkA" href="#" class="btn btn-blue">方案 A：标准跳转</a>
-
-        <a id="linkB" href="#" class="btn btn-orange">方案 B：强力跳转</a>
-
-        <div class="info">
-            <b>测试说明：</b><br>
-            1. 先点蓝色，如果不跳，说明该浏览器拦截了标准 App Links。<br>
-            2. 再点橙色，如果弹出“是否打开应用”，说明强力方案生效。
-        </div>
+    <div class="content">
+        <div class="loader" id="loader"></div>
+        <h2 id="status-text">正在安全返回应用...</h2>
+        <p>认证已成功，请稍候</p>
+        
+        <a id="manual-btn" href="#">立即返回 App</a>
     </div>
 
     <script>
-        // ======= 【只需修改这里】 =======
-        const myDomain = "hifier.mediacare.top";     // 你的域名，不带 https://
-        const myPackage = "top.mediacare.hifier";    // 你的包名
-        const myPath = "/auth";                 // 路径，默认用 / 即可
-        // ==============================
+        // ======= 配置区 =======
+        const CONFIG = {
+            domain: "hifier.mediacare.top",
+            package: "top.mediacare.hifier",
+            path: "/auth"
+        };
 
-        // 自动生成链接
-        document.getElementById('linkA').href = "https://" + myDomain + myPath;
-        
-        // 构造 Intent 字符串
-        const intentUri = "intent://" + myDomain + myPath + "#Intent;scheme=https;package=" + myPackage + ";end";
-        document.getElementById('linkB').href = intentUri;
+        function triggerJump() {
+            // 1. 获取当前页面的所有参数 (code, state, token 等)
+            const params = window.location.search;
+            
+            // 2. 构造强力 Intent 协议
+            const intentUri = `intent://${CONFIG.domain}${CONFIG.path}${params}#Intent;scheme=https;package=${CONFIG.package};end`;
+
+            // 3. 将 Intent 绑定到手动按钮上
+            const btn = document.getElementById('manual-btn');
+            btn.href = intentUri;
+
+            // 4. 尝试立即自动跳转
+            window.location.replace(intentUri);
+
+            // 5. 容错处理：如果 2 秒后页面还在，说明被浏览器拦截了
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('status-text').innerText = '请点击下方按钮继续';
+                document.getElementById('manual-btn').style.display = 'inline-block';
+            }, 2000);
+        }
+
+        // 页面加载完成后执行
+        window.onload = triggerJump;
     </script>
 </body>
 </html>
