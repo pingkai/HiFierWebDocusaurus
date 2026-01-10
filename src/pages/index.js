@@ -13,6 +13,10 @@ function HomepageHeader() {
     i18n.currentLocale === "zh-Hans"
       ? "https://s2.loli.net/2025/10/11/hVNlg9kKWyzPuUr.png"
       : "https://s2.loli.net/2025/10/11/aB7XC952UAKkdSr.png";
+  const AndroidAPKBadge =
+    i18n.currentLocale === "zh-Hans"
+      ? "https://s2.loli.net/2026/01/10/RQKwD8Mja79LdVu.png"
+      : "https://s2.loli.net/2026/01/10/6zc4YVrLy8faSQG.png";
   return (
     <header
       className={clsx("hero hero--primary", styles.heroBanner)}
@@ -63,6 +67,22 @@ function HomepageHeader() {
           >
             <img
               src={AppStoreBadge}
+              style={{ width: "10rem", height: "auto" }}
+            />
+          </a>
+        </div>
+        <div
+          className={styles.buttons}
+          style={{ justifyContent: "flex-start", marginTop: "1rem" }}
+        >
+          <a
+            href="https://www.pgyer.com/hifier"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block", height: 60 }}
+          >
+            <img
+              src={AndroidAPKBadge}
               style={{ width: "10rem", height: "auto" }}
             />
           </a>
