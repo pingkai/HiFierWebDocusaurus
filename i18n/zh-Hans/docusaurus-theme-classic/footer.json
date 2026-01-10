@@ -8,7 +8,7 @@
     "description": "The label of footer link with label=Privacy Policy linking to /privacy_policy"
   },
   "copyright": {
-    "message": "Copyright © 2025 mediacare.top. All rights reserved.",
-    "description": "The footer copyright"
+    "message": "版权所有 © 2026 MediaCare.top。保留所有权利。",
+    "description": "页脚版权信息"
   }
 }
