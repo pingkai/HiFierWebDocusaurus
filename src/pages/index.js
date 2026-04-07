@@ -103,8 +103,8 @@ function HomepageHeader() {
         style={{ flex: 1, minWidth: 0, maxWidth: "50%", textAlign: "right" }}
       >
         <img
-          src="https://s2.loli.net/2025/10/11/KWpYQ2xbvzaXufF.png"
-          srcSet="https://s2.loli.net/2025/10/11/m2DeWUdr6kSnyNf.png 2x, https://s2.loli.net/2025/10/11/aZMkLUFYDlditmc.png 3x"
+          src="https://files.seeusercontent.com/2026/04/07/0Uat/music_phone.png"
+          srcSet="https://files.seeusercontent.com/2026/04/07/Jgo1/music_phone2x.png 2x, https://files.seeusercontent.com/2026/04/07/Qw4f/music_phone3x.png 3x"
           style={{ width: "100%", height: "auto", maxWidth: 500 }}
           alt="HiFier Preview"
         />
