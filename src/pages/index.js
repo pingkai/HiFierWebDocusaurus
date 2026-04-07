@@ -9,14 +9,17 @@ import HomepageFeatures from "../components/HomepageFeatures";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   const { i18n } = useDocusaurusContext();
+
   const AppStoreBadge =
     i18n.currentLocale === "zh-Hans"
       ? "https://s2.loli.net/2025/10/11/hVNlg9kKWyzPuUr.png"
       : "https://s2.loli.net/2025/10/11/aB7XC952UAKkdSr.png";
+
   const AndroidAPKBadge =
     i18n.currentLocale === "zh-Hans"
-      ? "https://s2.loli.net/2026/01/10/RQKwD8Mja79LdVu.png"
-      : "https://s2.loli.net/2026/01/10/6zc4YVrLy8faSQG.png";
+      ? "https://files.seeusercontent.com/2026/04/07/Tmu0/GetItOnGooglePlay_Badge_Web_colo.png"
+      : "https://files.seeusercontent.com/2026/04/07/6oNk/GetItOnGooglePlay_Badge_Web_colo.png";
+
   return (
     <header
       className={clsx("hero hero--primary", styles.heroBanner)}
@@ -55,35 +58,41 @@ function HomepageHeader() {
         >
           {siteConfig.tagline}
         </p>
+
+        {/* 按钮容器：改为 Flex 布局并合并 */}
         <div
           className={styles.buttons}
-          style={{ justifyContent: "flex-start", marginTop: "1rem" }}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "1rem",
+            flexWrap: "wrap",
+            justifyContent: "flex-start",
+            marginTop: "1.5rem",
+          }}
         >
           <a
             href="https://apps.apple.com/app/id6740998246"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: "inline-block", height: 60 }}
+            style={{ display: "inline-block" }}
           >
             <img
               src={AppStoreBadge}
               style={{ width: "10rem", height: "auto" }}
+              alt="App Store"
             />
           </a>
-        </div>
-        <div
-          className={styles.buttons}
-          style={{ justifyContent: "flex-start", marginTop: "1rem" }}
-        >
           <a
-            href="https://www.pgyer.com/hifier"
+            href="https://play.google.com/store/apps/details?id=top.mediacare.hifier"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: "inline-block", height: 60 }}
+            style={{ display: "inline-block" }}
           >
             <img
               src={AndroidAPKBadge}
-              style={{ width: "10rem", height: "auto" }}
+              style={{ width: "11rem", height: "auto" }}
+              alt="Google Play"
             />
           </a>
         </div>
@@ -96,7 +105,8 @@ function HomepageHeader() {
         <img
           src="https://s2.loli.net/2025/10/11/KWpYQ2xbvzaXufF.png"
           srcSet="https://s2.loli.net/2025/10/11/m2DeWUdr6kSnyNf.png 2x, https://s2.loli.net/2025/10/11/aZMkLUFYDlditmc.png 3x"
-          style={{ width: "100%", height: "auto", maxWidth: 500 }} // maxWidth可控制图片最大显示
+          style={{ width: "100%", height: "auto", maxWidth: 500 }}
+          alt="HiFier Preview"
         />
       </div>
     </header>
