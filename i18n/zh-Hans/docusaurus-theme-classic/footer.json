@@ -7,6 +7,10 @@
     "message": "隐私协议",
     "description": "The label of footer link with label=Privacy Policy linking to /privacy_policy"
   },
+  "link.item.label.AFDIAN Sponsoring": {
+    "message": "爱发电赞助",
+    "description": "The label of footer link with label=Sponsoring linking to https://afdian.com/a/hifier"
+  },
   "copyright": {
     "message": "版权所有 © 2026 MediaCare.top。保留所有权利。",
     "description": "页脚版权信息"
