@@ -134,6 +134,10 @@ const darkCodeTheme = themes.dracula;
                   label: "Privacy Policy",
                   to: "/privacy_policy",
                 },
+                {
+                  label: "AFDIAN Sponsoring",
+                  href: "https://afdian.com/a/hifier",
+                },
               ],
             },
           ],
