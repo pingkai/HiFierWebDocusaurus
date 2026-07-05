@@ -1,12 +1,29 @@
 - # **Privacy Policy**
-  **Last Updated:** May. 2026
+  **Last Updated:** Jul. 2026
   
-  **Effective Date:** May. 2026
+  **Effective Date:** Jul. 2026
 
   Thank you for using the HiFier app! We highly value your privacy and the protection of your personal information. This Privacy Policy is intended to clearly and transparently explain how we collect, use, store, share, and protect your data.
 
   Please read and understand this Privacy Policy carefully before using the HiFier app. If you do not agree with any part of this Policy, please discontinue using our app.
 ## 1. How We Collect Data
+
+### For Users of Android APKs Distributed Outside of Google Play (Mainland China)
+Since this distribution channel is not supported by a standard app store, we have developed our own backend system to manage in-app purchases.
+
+Users may register using any valid email address. Upon registration, HiFier utilizes the **ANDROID_ID** to manage trial periods. Please note that this is not a unique device identifier and cannot be used to track activity across different apps. For detailed information regarding this identifier, please refer to: https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID
+
+Registered Email: Used for purchase recovery and password resets. Your email address will not be shared with any third parties.
+
+Your Password: **We prioritize the security of your password above all else**. Neither our App nor our backend system stores your original password. We employ industry-recognized, highly secure one-way hashing algorithms to verify your password. This process is irreversible, ensuring that it is mathematically **impossible for anyone to derive your original password** from the stored data. For detailed technical information on these algorithms, please refer to: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+
+Our Backend: We utilize Supabase official backend service as our backend server, with data physically stored in Singapore.
+
+Except for the data mentioned above, please refer to the privacy terms applicable to Apple App Store and Google Play Store users.
+
+Please note that the Android version distributed in Mainland China and the version available on the Google Play Store are **different build packages**. The Google Play Store version does not collect the aforementioned data.
+
+### For Users of the Apple App Store and Google Play Store
 
 Starting from version 1.5.14, iCloud Sync is enabled by default. If active, some of your data will be stored in iCloud. For details, see: [iCloud Data Synchronization](#3. iCloud Data Synchronization)
 
