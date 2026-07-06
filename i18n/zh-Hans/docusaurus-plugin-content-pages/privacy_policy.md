@@ -10,8 +10,8 @@
 ## 一、我们如何收集数据
 
 ### 中国大陆地区从非Google Play商店下载的安卓安装包的用户
-此发布渠道由于没有应用商店做支撑，我们自建了简单的后台系统，用户完成用户完成应用内购流程。
-用户可以用任何有效的电子邮箱进行注册，注册后HiFier将使用**ANDROID_ID**作为试用期控制，此ID并非设备的唯一ID，不能跨app使用，有关此ID的详细信息请参考：https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID
+此发布渠道由于没有应用商店做支撑，我们自建了简单的后台系统，用于完成应用内购流程。
+用户可以用任何有效的电子邮箱进行注册，注册后HiFier将使用**ANDROID_ID**作为试用期控制，此ID并非设备的唯一ID，不能用于跨App追踪，有关此ID的详细信息请参考：https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID
 
 注册的邮箱：用于恢复购买和密码恢复，不会共享给任何第三方。
 
