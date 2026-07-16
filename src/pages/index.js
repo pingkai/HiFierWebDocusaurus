@@ -15,11 +15,13 @@ function HomepageHeader() {
       ? "https://s2.loli.net/2025/10/11/hVNlg9kKWyzPuUr.png"
       : "https://s2.loli.net/2025/10/11/aB7XC952UAKkdSr.png";
 
-  const AndroidAPKBadge =
+  const GooglePlayBadge =
     i18n.currentLocale === "zh-Hans"
       ? "https://files.seeusercontent.com/2026/04/07/Tmu0/GetItOnGooglePlay_Badge_Web_colo.png"
       : "https://files.seeusercontent.com/2026/04/07/6oNk/GetItOnGooglePlay_Badge_Web_colo.png";
 
+  const AndroidAPKBadge =
+    "https://files.seeusercontent.com/2026/07/16/gKr2/116086122-1024x303-1.png";
   return (
     <header
       className={clsx("hero hero--primary", styles.heroBanner)}
@@ -90,9 +92,21 @@ function HomepageHeader() {
             style={{ display: "inline-block" }}
           >
             <img
-              src={AndroidAPKBadge}
+              src={GooglePlayBadge}
               style={{ width: "11rem", height: "auto" }}
               alt="Google Play"
+            />
+          </a>
+          <a
+            href="https://www.pgyer.com/hifier"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block" }}
+          >
+            <img
+              src={AndroidAPKBadge}
+              style={{ width: "11rem", height: "auto" }}
+              alt="Android  APK"
             />
           </a>
         </div>
