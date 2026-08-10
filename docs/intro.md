@@ -76,6 +76,8 @@ Because driving isn't ideal for complex operations, CarPlay currently supports a
 
 ### 6. DoP output capability
 
-Due to iOS system limitations, the current maximum output is DSD128. DSD samples above this sampling rate will be converted to PCM for output. Currently, the highest DSD decoded is DSD1024, but this may vary depending on the performance of the phone. Since the current Mac version uses the underlying iOS library, it does not support DSD output. If it need to output DSD on a Mac in the future, it will need to support the Mac system separately.
+Due to iOS system limitations, the current maximum output is DSD128. DSD samples above this sampling rate will be converted to PCM for output. The highest DSD currently tested and decodable is DSD1024, though this may vary depending on the performance of the phone.
+
+Since the current Mac version uses the underlying iOS library, there is no interface on the Mac system to set the output format of hardware devices, making direct DoP output unavailable. However, you can manually change it to the corresponding sample rate through the system's "Audio MIDI Setup" and set the bit depth to 24 or 32 bits to achieve DoP output.
 
 Theoretically, Android’s DSD output capability can surpass that of iOS. Updates will be provided once the Android version is supported.
