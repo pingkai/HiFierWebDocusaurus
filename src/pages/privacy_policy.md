@@ -1,7 +1,7 @@
 - # **Privacy Policy**
-  **Last Updated:** Jul. 2026
+  **Last Updated:** Sep. 2026
   
-  **Effective Date:** Jul. 2026
+  **Effective Date:** Sep. 2026
 
   Thank you for using the HiFier app! We highly value your privacy and the protection of your personal information. This Privacy Policy is intended to clearly and transparently explain how we collect, use, store, share, and protect your data.
 
@@ -59,6 +59,13 @@ Starting from version 1.5.14, iCloud Sync is enabled by default. If active, some
   - For related privacy policies, please refer to:
     - [Shazam Privacy Policy](https://www.shazam.com/privacy/summary)
     - [Apple Privacy Policy](https://www.apple.com/privacy/)
+8. DLNA
+ - When HiFier acts as a sender:
+    - Currently, when HiFier pushes your data to a third-party DLNA player, it relays the data and does not send the original URL information—including authentication details—to the third-party playback device. However, this is not done for data security purposes, but rather because it is technically necessary. In future versions, the original URL and even authentication details may be sent to third-party playback devices. The data includes media file information and cover art information (if any).
+    - Once pushed to a third-party device, HiFier cannot know or guarantee the security of your data; please refer to the privacy policy of the third-party DLNA playback device.
+    - HiFier uses the UPnP protocol to discover all compatible devices on your local area network and retrieves the playback status of the corresponding devices during playback. All information is used exclusively for DLNA playback, and HiFier does not collect any related information.
+  - When HiFier acts as a receiver:
+    - Media file data pushed to HiFier from third-party DLNA pushing software is used solely for playback and display purposes, and no data is collected. 
 ## 3. iCloud Data Synchronization
 
 The iCloud synchronization feature primarily provides the following functions:
