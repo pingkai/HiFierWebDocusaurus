@@ -27,6 +27,36 @@ For your safety, we strongly recommend that you turn this option off while drivi
 
 :::
 
+## DLNA
+
+By default, the DLNA feature is enabled as a pushing (controller) endpoint. Once turned on, HiFier will scan your local network for compatible renderers/players. When an available player is detected, the corresponding icon will appear on the playback page, allowing you to stream audio directly to that device.
+
+On iOS systems, if both DLNA and AirPlay devices are present simultaneously, HiFier merges the AirPlay and DLNA icons. This means if you wish to use the AirPlay function under these conditions, a double-tap is required. Alternatively, if you only want to use AirPlay, you can disable DLNA in the settings so that the playback page displays the AirPlay icon exclusively.
+
+Toggling the DLNA feature off and then back on triggers the following behaviors:
+- When HiFier acts as a **controller**, it resends discovery requests to the network.
+- When HiFier acts as a **renderer**, it re-announces its presence to all controllers on the network.
+
+Therefore, trying to disable and re-enable this feature can help resolve issues where devices fail to be discovered.
+
+When HiFier acts as a controller, it also functions as a DMS (Digital Media Server) in most cases. Currently, HiFier does not check the playback capabilities of the receiving endpoint; instead, it pushes the raw data directly to the playback device. If the receiving end does not support the specific format, playback will fail—**HiFier does not transcode data into a format supported by the media player prior to pushing.** 
+
+The reason behind this design is that transcoding requires downloading the file locally first, followed by transcoding and then streaming, which would introduce significant waiting times for the user. To address potential compatibility issues, HiFier provides alternative solution:
+
+HiFier itself also supports operating as a DLNA renderer, and its playback capabilities as a renderer are identical to its local playback capabilities, ensuring virtually seamless compatibility when pushing audio between HiFier instances.
+
+HiFier supports connecting USB DAC devices for bit-perfect output (including DSD) on both iOS and Android platforms. You can easily repurpose one device running HiFier as a dedicated digital transport connected to your external DAC or amplifier, while using another device running HiFier as the remote control.
+
+### Advantages of Using HiFier as a Digital Audio Player
+
+Using a mobile device running HiFier as a dedicated digital playback transport offers several distinct benefits:
+
+1. **Low Hardware Barrier:** HiFier currently supports iOS 15.1 and above, and Android 8.0 and above (the minimum requirement for exclusive audio output). You can easily take an old smartphone paired with a wireless charger to serve as a permanent fixture. If you have an old device lying around, it's a zero-cost solution; if not, sourcing a used device is very affordable.
+2. **Dual-Purpose Convenience:** Your phone remains fully functional as a daily mobile phone, eliminating the need for a single-purpose dedicated hardware device.
+3. **Continuous Updates:** As a mobile application, HiFier receives ongoing maintenance and updates, offering a clear advantage over standalone hardware audio players that rarely receive firmware upgrades.
+4. **Broad Format Support:** HiFier supports almost all music formats, including SACD ISOs, and avoids unnecessary data validation checks to maximize successful playback of any streamable content.
+5. **Modular Longevity:** If your phone ever lags or slows down, you can replace it immediately without wasting the high-end DAC and audio hardware. (In contrast, traditional Android-based digital audio players integrate the decoding circuitry directly with the computing unit, meaning that when the device lags or becomes obsolete, the entire unit must be discarded).
+
 ## Audio
 
 ### DoP
