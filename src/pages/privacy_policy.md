@@ -1,7 +1,7 @@
-- # **Privacy Policy**
-  **Last Updated:** Sep. 2026
+- # **HiFier Privacy Policy**
+  **Last Updated:** Oct. 2026
   
-  **Effective Date:** Sep. 2026
+  **Effective Date:** Oct. 2026
 
   Thank you for using the HiFier app! We highly value your privacy and the protection of your personal information. This Privacy Policy is intended to clearly and transparently explain how we collect, use, store, share, and protect your data.
 
@@ -33,6 +33,8 @@ Starting from version 1.5.14, iCloud Sync is enabled by default. If active, some
    - When using the app, you may provide account authorization (e.g., mounted cloud drives, media server login credentials). Such information is stored locally on your device only. We do not upload, retain, or share this information.
 3. Third-Party SDKs
    - To ensure stable operation, deliver ads, and perform analytics, we integrate third-party SDKs. These SDKs may collect device-related data (see [Third-Party SDK Privacy](#3-third-party-sdk-privacy)).
+4. Third-Party Servers
+   - **Last.fm:** Once you log in to your Last.fm account, HiFier will submit your listening history according to Last.fm's requirements. This data is stored and managed by Last.fm; please refer to Last.fm's Privacy Policy at [https://www.last.fm/legal/privacy](https://www.last.fm/legal/privacy) for details. Additionally, HiFier will fetch your recent Last.fm scrobbles to power personalized recommendations. If you wish to stop Last.fm-related services, simply log out of your Last.fm account. We also use Last.fm's public API to fetch similar tracks for the song currently playing, which involves uploading the current track's title and artist information to Last.fm's servers. You can turn off this feature by disabling the "Online Metadata Fetching" toggle in Settings. 
 
 ## 2. How We Use and Store Your Data
 
