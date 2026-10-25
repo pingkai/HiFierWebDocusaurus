@@ -1,0 +1,19 @@
+{
+  "promo_banner": {
+    "color": {
+      "default": {
+        "background": "#F5EDE0",
+        "text": "#942821"
+      },
+      "zh-Hans": {
+        "background": "#F5EDE0",
+        "text": "#942821"
+      }
+    },
+    "is_active": false,
+    "title": {
+      "default": "Hi September: 25% OFF Lifetime!",
+      "zh-Hans": "你好, 九月：终身会员7.5折！"
+    }
+  }
+}
