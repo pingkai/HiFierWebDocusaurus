@@ -10,10 +10,10 @@
         "text": "#942821"
       }
     },
-    "is_active": false,
+    "is_active": true,
     "title": {
-      "default": "Hi September: 25% OFF Lifetime!",
-      "zh-Hans": "你好, 九月：终身会员7.5折！"
+      "default": "Happy Halloween: 25% OFF Lifetime!",
+      "zh-Hans": "万圣节购物季：终身会员7.5折！"
     }
   }
 }
