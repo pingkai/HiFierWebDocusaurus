@@ -98,11 +98,17 @@ iCloud数据同步功能主要有以下功能
 其他非敏感数据，我们直接明文保存在您的iCloud文件系统中，这部分数据对用户不可见。
 
 ## 四、第三方 SDK 隐私相关
-1. 友盟统计 (Umeng SDK)
+1. 友盟+应用性能监控SDK
+  - 开发者:友盟同欣（北京）科技有限公司
   - 用途：崩溃分析与统计，优化应用体验。
   - 可能收集：IMEI/MAC/Android ID/IDFA/OAID/OpenUDID/GUID/SIM IMSI/ICCID、位置信息、网络信息等。
   - 隐私政策：https://www.umeng.com/page/policy
-2. 广告平台
+2. 友盟+移动统计SDK
+  - 开发者:友盟同欣（北京）科技有限公司
+  - 用途：优化应用体验。
+  - 可能收集：IMEI/MAC/Android ID/IDFA/OAID/OpenUDID/GUID/SIM IMSI/ICCID、位置信息、网络信息等。
+  - 隐私政策：https://www.umeng.com/page/policy
+3. 广告平台
   - **非付费用户**将会看到广告，当您订阅后，下次程序启动将不会初始化任何广告平台。
   - **中国大陆iOS用户**：广告由穿山甲平台提供。隐私政策：https://www.csjplatform.com/privacy/partner
   - **中国大陆Android用户**: 暂时不提供广告服务。
